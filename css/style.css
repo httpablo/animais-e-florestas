@@ -117,7 +117,7 @@ h1 {
   color: #3b3b3b;
 }
 
-h2 {
+.item h2 {
   display: inline-block;
   padding: 0 20px 6px 20px;
   min-width: 200px;
@@ -146,7 +146,7 @@ p {
   margin-bottom: 40px;
 }
 
-img {
+.item-img img {
   display: block;
   max-width: 100%;
   float: right;
@@ -206,13 +206,13 @@ img {
   top: 0;
 }
 
-[data-click].active {
+.js [data-click].active {
   background: #56cc9d;
   color: white;
   border-color: #56cc9d;
 }
 
-[data-target].active {
+.js [data-target].active {
   opacity: 1;
   visibility: visible;
   transition: 0.3s;
@@ -232,7 +232,7 @@ img {
     float: right;
     position: relative;
     cursor: pointer;
-    backface-visibility: hidden; 
+    backface-visibility: hidden;
   }
 
   .mobile-btn::after,
@@ -289,4 +289,53 @@ img {
     width: 100%;
     text-align: center;
   }
+}
+
+.introducao {
+  background: black;
+}
+
+.introducao h2 {
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: -2em;
+  margin-bottom: 2em;
+  line-height: 0;
+}
+
+.introducao img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide > * {
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: 5s;
+}
+
+.slide > .active {
+  position: relative;
+  opacity: 1;
+}
+
+.js [data-anime] {
+  opacity: 0;
+  transform: translate3d(0, -50px, 0);
+  transition: 3s;
+}
+
+.js [data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
