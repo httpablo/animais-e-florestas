@@ -1,4 +1,4 @@
-//adicionar classe ao click
+/* adicionar classe ao click */
 $("[data-group]").each(function () {
   var $allTarget = $(this).find("[data-target]"),
     $allClick = $(this).find("[data-click]"),
@@ -21,7 +21,7 @@ $("[data-group]").each(function () {
   });
 });
 
-// Scroll suave
+/* scroll suave */
 $('.menu-nav a[href^="#"]').click(function (e) {
   e.preventDefault();
   var id = $(this).attr("href"),
@@ -45,7 +45,7 @@ $(".logo").click(function (e) {
   );
 });
 
-// Scroll suave
+/* scroll suave */
 $("section").each(function () {
   var height = $(this).height(),
     offsetTop = $(this).offset().top,
@@ -64,4 +64,10 @@ $("section").each(function () {
       $itemMenu.removeClass("active");
     }
   });
+});
+
+/* menu-mobile */
+$(".mobile-btn").click(function () {
+  $(this).toggleClass("active");
+  $(".mobile-menu").toggleClass("active");
 });
